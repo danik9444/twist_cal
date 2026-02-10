@@ -652,6 +652,12 @@
                 max-height: 70vh;
                 overflow-y: auto;
                 transition: max-height 0.3s ease;
+                padding: 1rem 1.5rem;
+            }
+
+            .price-summary.collapsed {
+                padding: 0.75rem 1.5rem;
+                max-height: none;
             }
 
             .price-summary.collapsed .summary-lines,
@@ -660,18 +666,25 @@
             .price-summary.collapsed .summary-subtotal,
             .price-summary.collapsed .summary-vat,
             .price-summary.collapsed .vat-note,
-            .price-summary.collapsed .btn-copy {
+            .price-summary.collapsed .btn-copy,
+            .price-summary.collapsed h2 {
                 display: none;
             }
 
-            .price-summary.collapsed {
-                max-height: none;
+            .price-summary.collapsed .summary-total {
+                margin-top: 0;
+                padding: 0;
+                background: none;
+                border-radius: 0;
             }
 
-            .price-summary.collapsed h2 {
-                margin-bottom: 0;
-                padding-bottom: 0;
-                border-bottom: none;
+            .price-summary.collapsed .summary-total-label {
+                font-size: 0.95rem;
+                font-weight: 500;
+            }
+
+            .price-summary.collapsed .summary-total-value {
+                font-size: 1.2rem;
             }
 
             .summary-expand-btn {
@@ -687,6 +700,11 @@
                 margin-bottom: 0.5rem;
             }
 
+            .price-summary.collapsed .summary-expand-btn {
+                margin-bottom: 0;
+                padding: 0.25rem;
+            }
+
             .summary-expand-btn svg {
                 width: 24px;
                 height: 24px;
@@ -698,11 +716,12 @@
             }
 
             .calculator-column {
-                padding-bottom: 120px;
+                padding-bottom: 90px;
             }
 
             .policies-section {
-                margin-bottom: 120px;
+                margin-bottom: 100px;
+                margin-top: 0;
             }
         }
 
